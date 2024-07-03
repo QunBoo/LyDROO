@@ -15,6 +15,16 @@ from scipy.optimize import linprog
 
 
 def Algo1_NUM(mode,h,w,Q,Y, V=20):
+    """
+    Algo1_NUM: 解决了Sev。IV、 B给定（P1）中的卸载决策的最优资源分配问题（P4）的算法1
+    :param mode: 二进制卸载决策
+    :param h: 信道增益
+    :param w: 权重参数
+    :param Q: 数据队列长度
+    :param Y: 虚拟能量队列长度
+    :param V: 量化参数
+    :return: 所有用户的最优目标值、计算速率和能耗
+    """
    
     ch_fact = 10**10   # scaling factors to avoid numerical precision problems
     d_fact = 10**6
